@@ -18,7 +18,8 @@ def create_user(
     user = User.objects.create_user(
         username=username,
         **extra_fields,
-    ).set_password(password)
+    )
+    user.set_password(password)
     return user
 
 
