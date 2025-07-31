@@ -112,7 +112,7 @@ class Ticket(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self) -> str:
-        return (f'{self.movie_session.movie.title} '
+        return (f"{self.movie_session.movie.title} "
                 f'{self.movie_session.show_time.strftime("%Y-%m-%d")} '
                 f'{self.movie_session.show_time.strftime("%H:%M:%S")} '
-                f'(row: {str(self.row)}, seat: {str(self.seat)})')
+                f"(row: {str(self.row)}, seat: {str(self.seat)})")
